@@ -1,0 +1,41 @@
+.cart {
+  max-width: 30rem;
+  background-color: #313131;
+  color: white;
+}
+
+.cart h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.actions button {
+  color: black;
+  background-color: aliceblue;
+  border: none;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.actions button:hover {
+  color: rgb(57, 213, 252);
+  background-color: rgb(185, 247, 247);
+  border: none;
+  box-shadow: 0 0 0 2px rgb(96, 197, 255);
+}
+
+.actions button:active {
+  background-color: bisque;
+  box-shadow: 0 0 0 2px wheat;
+}
