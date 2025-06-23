@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../../store/index";
 
 const Cart = () => {
-  const { cartOngoing: isOpen, cartedItems } = useSelector(
+  const { cartIsVisible: isOpen, cartedItems } = useSelector(
     (state) => state.user
   );
   const dispatch = useDispatch();
