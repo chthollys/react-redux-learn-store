@@ -1,14 +1,23 @@
 import { useDispatch } from "react-redux";
 import Card from "../UI/Card";
 import classes from "./ProductItem.module.css";
-import { userActions } from "../../store";
+import { userActions } from "../../store/userSlice";
+import loadNotif from "../../util/loadNotif";
 
 const ProductItem = (item) => {
   const { title, price, description, image } = item;
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
-    dispatch(userActions.addToCart(item));
+    const addItemFunction = async () => {
+      dispatch(userActions.addToCart(item));
+    };
+
+    loadNotif(addItemFunction, dispatch, {
+      success: "Item added succesfully",
+      loading: "Adding Item to cart",
+      error: "Error in adding item",
+    });
   };
 
   return (

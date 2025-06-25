@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const incrementCartedItemQuantity = (state, id) => {
   state.cartedItems = state.cartedItems.map((item) => {
@@ -52,11 +52,5 @@ const userSlice = createSlice({
   },
 });
 
-const store = configureStore({
-  reducer: {
-    user: userSlice.reducer,
-  },
-});
-
-export default store;
+export default userSlice.reducer;
 export const userActions = userSlice.actions;

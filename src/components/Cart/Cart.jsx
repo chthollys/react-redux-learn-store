@@ -3,7 +3,7 @@ import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import { userActions } from "../../store/index";
+import { userActions } from "../../store/userSlice";
 
 const Cart = () => {
   const { cartIsVisible: isOpen, cartedItems } = useSelector(

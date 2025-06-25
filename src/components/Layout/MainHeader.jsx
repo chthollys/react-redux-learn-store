@@ -1,4 +1,4 @@
-import { userActions } from "../../store";
+import { userActions } from "../../store/userSlice";
 import CartButton from "../Cart/CartButton";
 import classes from "./MainHeader.module.css";
 import { useDispatch } from "react-redux";
