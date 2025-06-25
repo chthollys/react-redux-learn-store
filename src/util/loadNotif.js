@@ -6,7 +6,7 @@ const initalMsg = {
   loading: "loading",
 };
 
-export default async function loadNotif(awaitFn, dispatch, msg = initalMsg) {
+const loadNotif = async (awaitFn, dispatch, msg = initalMsg) => {
   dispatch(
     notifActions.showNotif({
       status: "loading",
@@ -37,4 +37,6 @@ export default async function loadNotif(awaitFn, dispatch, msg = initalMsg) {
   setTimeout(() => {
     dispatch(notifActions.hideNotif());
   }, 4000);
-}
+};
+
+export default loadNotif;
